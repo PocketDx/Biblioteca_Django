@@ -15,3 +15,8 @@ Este proyecto es una aplicación web usando Django que permite:
     * Registrar autores y libros
     * Registrar reseñas para cada libro
     * Visualizar libros y reseñas
+
+## Instalación
+    ´´´ 
+    https://github.com/PocketDx/Biblioteca_Django.git
+    ´´´
