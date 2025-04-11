@@ -18,14 +18,14 @@ Este proyecto es una aplicación web usando Django que permite:
 
 ## Instalación
 
-1. Clonar el repositorio:
-```
-git clone https://github.com/PocketDx/Biblioteca_Django.git
+    1. Clonar el repositorio:
+        ```
+        git clone https://github.com/PocketDx/Biblioteca_Django.git
 
-cd biblioteca_project
-```
+        cd biblioteca_project
+        ```
 
-2. Instalar las dependencias:
-```
-pip install -r requirements.txt
-```
+    2. Instalar las dependencias:
+        ```
+        pip install -r requirements.txt
+        ```
