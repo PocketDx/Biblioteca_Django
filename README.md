@@ -17,6 +17,17 @@ Este proyecto es una aplicación web usando Django que permite:
     * Visualizar libros y reseñas
 
 ## Instalación
-    ´´´ 
-    https://github.com/PocketDx/Biblioteca_Django.git
-    ´´´
+
+    1. Clonar el repositorio:
+        
+        ``` bash
+        git clone https://github.com/PocketDx/Biblioteca_Django.git
+
+        cd biblioteca_project
+        
+        ```
+    2. Instalar las dependencias:
+        
+        ```
+        pip install -r requirements.txt
+        ```
