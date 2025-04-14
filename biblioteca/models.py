@@ -6,9 +6,15 @@ class Autor(models.Model):
     nombre = models.CharField(max_length=100)
     nacionalidad = models.CharField(max_length=100)
 
-    def __str__(self):
-        # Representación legible del autor
+    def __str__(self): 
+        # Se sobreescribe el método __str__ para mostrar el nombre del autor mas claro y legible
         return f"{self.nombre}"
+    
+    class Meta: # Definición de la clase Meta para personalizar el modelo
+        # Se define el nombre de la tabla en la base de datos y los nombres en singular y plural
+        db_table = 'biblioteca_autor'
+        verbose_name = "Autor"
+        verbose_name_plural = "Autores"
 
 
 class Libro(models.Model):
