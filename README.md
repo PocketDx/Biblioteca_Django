@@ -35,9 +35,9 @@ Este proyecto es una aplicación web usando Django que permite:
     ```
 4. Prepara la ejecución
     ```
-    python manage.py migrate # Aplica las migraciones
-    python manage.py createsuperuser # Crear un super usuario (Opcional)
-    python manage.py runserver # Corre el servidor
+    python manage.py migrate  #Aplica las migraciones
+    python manage.py createsuperuser  # Crear un super usuario (Opcional)
+    python manage.py runserver  # Corre el servidor
 
     ```
 
@@ -51,5 +51,5 @@ Este proyecto es una aplicación web usando Django que permite:
     
     ```
     usuario: admin
-    clave: 1234coco
+    clave: 1234COCO
     ```
