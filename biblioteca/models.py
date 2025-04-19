@@ -30,6 +30,12 @@ class Libro(models.Model):
     def __str__(self):
         # Mostrar título y autor en el admin
         return f"{self.titulo} ({self.autor.nombre})"
+    
+    class Meta: # Definición de la clase Meta para personalizar el modelo
+        # Se define el nombre de la tabla en la base de datos y los nombres en singular y plural
+        db_table = 'biblioteca_libro'
+        verbose_name = "Libro"
+        verbose_name_plural = "Libros"
 
 
 class Resena(models.Model):
@@ -45,3 +51,9 @@ class Resena(models.Model):
     def __str__(self):
         # Representación de la calificación
         return f"La Calificación de {self.libro.titulo} es {self.calificacion}/5"
+    
+    class Meta: # Definición de la clase Meta para personalizar el modelo
+        # Se define el nombre de la tabla en la base de datos y los nombres en singular y plural
+        db_table = 'biblioteca_resena'
+        verbose_name = "Reseña"
+        verbose_name_plural = "Reseñas"
