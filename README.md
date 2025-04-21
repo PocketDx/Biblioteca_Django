@@ -61,3 +61,5 @@ Este proyecto es una aplicación web usando Django que permite:
 [![Panel-Admin.jpg](https://i.postimg.cc/G2wq3njn/Panel-Admin.jpg)](https://postimg.cc/sBmpK88T)
 
 > Este proyecto se desarrolla desde una practica academica, siguiendo algunas instrucciones del docente, complementado por videos de Youtube y usando ChatGPT como apoyo en consultas sobre conceptos desconocidos. Por lo cual este podría contener errores.
+
+>> Nota Personal: En el desarrollo del mismo, encontre el uso de metodos de python como, strip() y len() para aplicar la logica de "Validadores Personalizados".

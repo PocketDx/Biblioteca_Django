@@ -1,9 +1,27 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 
+# Validador personalizado para nombres vacíos o solo espacios
+def validar_nombre_no_vacio(valor):
+    if not valor.strip(): # Strip elimina los espacios en blanco al principio y al final de la cadena
+        raise ValidationError('El nombre no puede estar vacío o solo contener espacios.')
+
+
+# Validador para resumen mínimo
+def validar_resumen_minimo(valor):
+    if len(valor) < 50: # Len devuelve la longitud de la cadena
+        raise ValidationError('El resumen debe tener al menos 50 caracteres.')
+
+
+# Validador para calificación en rango
+def validar_calificacion(valor):
+    if valor < 1 or valor > 5:
+        raise ValidationError('La calificación debe estar entre 1 y 5.')
+
 class Autor(models.Model):
-    nombre = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=100, validators=[validar_nombre_no_vacio])
     nacionalidad = models.CharField(max_length=100)
 
     def __str__(self): 
@@ -25,7 +43,7 @@ class Libro(models.Model):
         related_name='libros'
     )
     fecha_publicacion = models.DateField()
-    resumen = models.TextField()
+    resumen = models.TextField(validators=[validar_resumen_minimo])
 
     def __str__(self):
         # Se sobreescribe el método __str__ para mostrar el título del libro y el nombre del autor de forma clara y legible
@@ -45,7 +63,7 @@ class Resena(models.Model):
         related_name='resenas'
     )
     texto = models.TextField()
-    calificacion = models.IntegerField()
+    calificacion = models.IntegerField(validators=[validar_calificacion])
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
