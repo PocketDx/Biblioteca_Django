@@ -23,7 +23,7 @@ Este proyecto es una aplicación web usando Django que permite:
 
     cd biblioteca_project
     ```
-2. Crea un entorno virtual y activalo
+2. Crea un entorno virtual y activalo (Windows)
     ```
     python -m venv venv
     .venv\Scripts\activate
@@ -54,8 +54,10 @@ Este proyecto es una aplicación web usando Django que permite:
     clave: 1234COCO
     ```
 
-# Capturas de Pantalla (Scrip y Panel Admin)
+# Capturas de Pantalla (Script y Panel Admin)
 
 [![Script.jpg](https://i.postimg.cc/fLzDrp0D/Script.jpg)](https://postimg.cc/DWM9WCgM)
 ---
 [![Panel-Admin.jpg](https://i.postimg.cc/G2wq3njn/Panel-Admin.jpg)](https://postimg.cc/sBmpK88T)
+
+> Este proyecto se desarrolla desde una practica academica, siguiendo algunas instrucciones del docente, complementado por videos de Youtube y usando ChatGPT como apoyo en consultas sobre conceptos desconocidos. Por lo cual este podría contener errores.
