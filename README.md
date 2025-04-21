@@ -53,3 +53,9 @@ Este proyecto es una aplicación web usando Django que permite:
     usuario: admin
     clave: 1234COCO
     ```
+
+# Capturas de Pantalla (Scrip y Panel Admin)
+
+[Script.jpg](https://postimg.cc/DWM9WCgM)
+---
+[Panel-Admin.jpg](https://postimg.cc/sBmpK88T)

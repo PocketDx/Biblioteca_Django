@@ -28,7 +28,7 @@ class Libro(models.Model):
     resumen = models.TextField()
 
     def __str__(self):
-        # Mostrar título y autor en el admin
+        # Se sobreescribe el método __str__ para mostrar el título del libro y el nombre del autor de forma clara y legible
         return f"{self.titulo} ({self.autor.nombre})"
     
     class Meta: # Definición de la clase Meta para personalizar el modelo
@@ -49,7 +49,7 @@ class Resena(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        # Representación de la calificación
+        # Se sobreescribe el método __str__ para mostrar la calificación del libro de forma clara y legible
         return f"La Calificación de {self.libro.titulo} es {self.calificacion}/5"
     
     class Meta: # Definición de la clase Meta para personalizar el modelo

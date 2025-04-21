@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from biblioteca.models import Autor, Libro, Resena
 
 # Crear Autores
@@ -41,3 +42,5 @@ Resena.objects.create(libro=libro1, texto='Una obra maestra de la literatura.', 
 Resena.objects.create(libro=libro2, texto='Una historia conmovedora y mágica.', calificacion=4)
 Resena.objects.create(libro=libro3, texto='Un mundo fascinante lleno de magia.', calificacion=5)
 Resena.objects.create(libro=libro4, texto='Una trama compleja y emocionante.', calificacion=4)
+
+print("Base de datos poblada exitosamente.")
