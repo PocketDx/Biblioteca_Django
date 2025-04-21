@@ -56,6 +56,6 @@ Este proyecto es una aplicación web usando Django que permite:
 
 # Capturas de Pantalla (Scrip y Panel Admin)
 
-[Script.jpg](https://postimg.cc/DWM9WCgM)
+[![Script.jpg](https://i.postimg.cc/fLzDrp0D/Script.jpg)](https://postimg.cc/DWM9WCgM)
 ---
 [Panel-Admin.jpg](https://postimg.cc/sBmpK88T)
