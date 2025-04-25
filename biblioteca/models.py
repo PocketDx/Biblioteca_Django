@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
@@ -63,7 +64,7 @@ class Resena(models.Model):
         related_name='resenas'
     )
     texto = models.TextField()
-    calificacion = models.IntegerField(validators=[validar_calificacion])
+    calificacion = models.FloatField(validators=[validar_calificacion, MinValueValidator(1), MaxValueValidator(5)])
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
