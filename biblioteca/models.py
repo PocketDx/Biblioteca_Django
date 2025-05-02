@@ -64,7 +64,7 @@ class Resena(models.Model):
         related_name='resenas'
     )
     texto = models.TextField()
-    calificacion = models.FloatField(validators=[validar_calificacion, MinValueValidator(1), MaxValueValidator(5)])
+    calificacion = models.FloatField(validators=[validar_calificacion, MinValueValidator(0.0), MaxValueValidator(5.0)])
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
