@@ -8,7 +8,7 @@ class AutorSerializer(serializers.ModelSerializer): # Campo de serializador para
 
 class LibroSerializer(serializers.ModelSerializer):
     recent_reviews = serializers.SerializerMethodField() # Campo personalizado para obtener reseñas recientes
-    author = serializers.ReadOnlyField(source='autor.nombre')  # Read-only para mostrar el nombre del autor
+    author_name = serializers.ReadOnlyField(source='autor.nombre')  # Read-only para mostrar el nombre del autor
 
     def get_recent_reviews(self, obj): # Método para obtener reseñas recientes
         reviews = obj.resenas.order_by('-fecha')[:5] # Se obtienen las 5 reseñas más recientes

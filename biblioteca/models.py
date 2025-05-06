@@ -64,12 +64,18 @@ class Resena(models.Model):
         related_name='resenas'
     )
     texto = models.TextField()
-    calificacion = models.FloatField(validators=[validar_calificacion, MinValueValidator(0.0), MaxValueValidator(5.0)])
-    fecha = models.DateTimeField(auto_now_add=True)
-
+    calificacion = models.FloatField(
+        validators=[
+            validar_calificacion, 
+            MinValueValidator(0.0, message= "La calificación no puede ser menor a 0.0"), 
+            MaxValueValidator(5.0, message= "La calificación no puede ser mayor a 5.0")
+        ]
+    )
     def __str__(self):
         # Se sobreescribe el método __str__ para mostrar la calificación del libro de forma clara y legible
         return f"La Calificación de {self.libro.titulo} es {self.calificacion}/5"
+    fecha = models.DateTimeField(auto_now_add=True) 
+        # Se establece la fecha y hora de creación de la reseña automáticamente
     
     class Meta: # Definición de la clase Meta para personalizar el modelo
         # Se define el nombre de la tabla en la base de datos y los nombres en singular y plural
