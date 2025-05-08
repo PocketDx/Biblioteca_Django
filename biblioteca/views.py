@@ -23,7 +23,7 @@ class LibroViewSet(viewsets.ModelViewSet): # Vista para el modelo Libro
     @action(detail=True, methods=['get'])
     def average_rating(self, request, pk=None):
         libro = self.get_object()
-        avg_rating = libro.resenas.aggregate(Avg('calificacion'))['calificacion__avg']
+        average_rating = libro.resenas.aggregate(Avg('calificacion'))['calificacion__avg']
         return Response({'average_rating': 0})
 
 class ResenaViewSet(viewsets.ModelViewSet): # Vista para el modelo Reseña
