@@ -18,8 +18,8 @@ def validar_resumen_minimo(valor):
 
 # Validador para calificación en rango
 def validar_calificacion(valor):
-    if valor < 1 or valor > 5:
-        raise ValidationError('La calificación debe estar entre 1 y 5.')
+    if valor < 0.0 or valor > 5.0: # Se valida que la calificación esté entre 0.0 y 5.0
+        raise ValidationError('La calificación debe estar entre 0 y 5')
 
 class Autor(models.Model):
     nombre = models.CharField(max_length=100, validators=[validar_nombre_no_vacio])
